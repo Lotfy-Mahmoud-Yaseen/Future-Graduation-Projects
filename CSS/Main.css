@@ -14,11 +14,28 @@ body {
 }
 
 .lol {
+    margin: 10px;
     font-size: 40px;
-    width: 600px;
+    width: 560px;
     padding: 30px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
     border-radius: 30px;
+    /* top: 75%;
+    left: 75%;
+    position: absolute; */
+    box-sizing: border-box;
+}
+
+.lol1 {
+    font-size: 40px;
+    width: 600px;
+    padding: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    border-radius: 30px;
+    top: 53%;
+    left: 60%;
+    position: absolute;
+    box-sizing: border-box;
 }
 
 
@@ -38,9 +55,10 @@ body {
     width: 400px;
     padding: 30px;
     border-radius: 10px;
-    top: 150%;
-    left: -50%;
+    top: 175%;
+    left: -180%;
     position: absolute;
+    transform: translate(-50%, -50%);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
 }
