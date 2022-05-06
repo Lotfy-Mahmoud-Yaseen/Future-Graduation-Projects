@@ -5,15 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="descripton" content="its only for Future Academy Students, come on to make your Graduation Project">
-
-
+    <!--  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="315658434996-sjeqbem2vk2786dm0d7bfr03gr91k4ln.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!--  -->
     <link rel="stylesheet" href="CSS/Main.css">
-
-
     <title>Login</title>
 </head>
 
 <body>
+    <!--  -->
+    <!-- <div id="signin"></div> -->
+
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <!--  -->
+
+
 
     <h1 class="lol">Future Graduation Project</h1>
 
@@ -59,6 +67,21 @@
     </div>
 
     <script src="JS/myScript.js"></script>
+    <!--  -->
+    <Script>
+        gapi.load('auth2', function() {
+            gapi.auth2.init();
+        });
+
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        }
+    </Script>
+    <!--  -->
 </body>
 
 </html>
