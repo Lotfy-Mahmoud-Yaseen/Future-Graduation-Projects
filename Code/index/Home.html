@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="..\Style\style.css">
+    <link rel="stylesheet" href="..\Style\upperbar.css">
+    <link rel="stylesheet" href="..\Style\sidebar.css">
+    <link rel="stylesheet" href="..\Style\post.css">
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- FontAweome CDN Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <!----======== Page Title ======== -->
+    <title>Future Graduation Projects</title>
+</head>
+
+<body>
+    <!-- The Upper Bar -->
+    <div class="upperbar close">
+        <div class="upper">
+            <!-- <i class='bx bxs-chat icon'></i> -->
+            <li class="nav-link">
+                <a href="#####">
+                    <i class='bx bx-chat icon'></i>
+                </a>
+            </li>
+        </div>
+    </div>
+
+    <!-- The Left Bar -->
+    <nav class="sidebar close">
+        <!-- Header Menu bar to  -->
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../../icons/FutureLogo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Future</span>
+                    <span class="profession">GraduationProjects</span>
+                </div>
+            </div>
+            <!--  -->
+            <i class='bx bx-chevron-right toggle'></i>
+            <!--  -->
+        </header>
+
+        <!--  -->
+        <div class="menu-bar">
+            <div class="menu">
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="Home.html">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+
+                    <!-- Notifications -->
+                    <li class="nav-link">
+                        <a href="Notifications.html">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notifications</span>
+                        </a>
+                    </li>
+
+                    <!--  -->
+                    <li class="nav-link">
+                        <a href="Team.html">
+                            <i class='bx bx-user icon'></i>
+                            <span class="text nav-text">Team</span>
+                        </a>
+                    </li>
+                    <!--  -->
+
+                    <li class="nav-link">
+                        <a href="Project.html">
+                            <i class='bx bx-code-alt icon'></i>
+                            <span class="text nav-text">Project</span>
+                        </a>
+                        <!--  -->
+                        <li class="nav-link">
+                            <a href="Book.html">
+                                <i class='bx bx-book icon'></i>
+                                <span class="text nav-text">Book</span>
+                            </a>
+                        </li>
+                        <!--  -->
+                        <li class="nav-link">
+                            <a href="About.html">
+                                <i class='bx bx-message-alt-detail icon'></i>
+                                <span class="text nav-text">About</span>
+                            </a>
+                        </li>
+
+
+                </ul>
+            </div>
+
+            <!--  -->
+            <!--  -->
+            <div class="bottom-content">
+                <li class="">
+                    <a href="Login.html">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+
+            </div>
+        </div>
+
+    </nav>
+
+
+    <!-- Creating Post -->
+    <div class="container">
+        <center>
+            <div class="inputs">
+                <input type="text" onclick="togglepopup()">
+            </div>
+            <div class="popup" id="popup-1">
+                <div class="overlay"></div>
+                <div class="content">
+                    <!-- Popup Content -->
+                    <div class="container2">
+                        <div class="wrapper">
+                            <section class="post">
+                                <header>Create Post</header>
+                                <a href="Home.html">
+                                    <i class='bx bx-message-rounded-x'></i>
+                                </a>
+                                <form action="#">
+                                    <div class="content">
+                                        <img src="../../icons/logo.png" alt="logo">
+                                        <div class="details">
+                                            <p>CodingNepal</p>
+                                            <div class="privacy">
+                                                <i class="fas fa-user-friends"></i>
+                                                <span>Friends</span>
+                                                <i class="fas fa-caret-down"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <textarea placeholder="What's on your mind, CodingNepal?" spellcheck="false" required></textarea>
+                                    <div class="theme-emoji">
+                                        <img src="../../icons/theme.svg" alt="theme">
+                                        <img src="../../icons/smile.svg" alt="smile">
+                                    </div>
+                                    <div class="options">
+                                        <p>Add to Your Post</p>
+                                        <ul class="list">
+                                            <li><img src="../../icons/gallery.svg" alt="gallery"></li>
+                                            <li><img src="../../icons/tag.svg" alt="gallery"></li>
+                                            <li><img src="../../icons/emoji.svg" alt="gallery"></li>
+                                            <li><img src="../../icons/mic.svg" alt="gallery"></li>
+                                            <li><img src="../../icons/more.svg" alt="gallery"></li>
+                                        </ul>
+                                    </div>
+                                    <button>Post</button>
+                                </form>
+                            </section>
+                            <section class="audience">
+                                <header>
+                                    <div class="arrow-back"><i class="fas fa-arrow-left"></i></div>
+                                    <p>Select Audience</p>
+                                </header>
+                                <div class="content">
+                                    <p>Who can see your post?</p>
+                                    <span>Your post will show up in News Feed, on your profile and in search results.</span>
+                                </div>
+                                <ul class="list">
+                                    <li>
+                                        <div class="column">
+                                            <div class="icon"><i class="fas fa-globe-asia"></i></div>
+                                            <div class="details">
+                                                <p>Public</p>
+                                                <span>Anyone on or off Facebook</span>
+                                            </div>
+                                        </div>
+                                        <div class="radio"></div>
+                                    </li>
+                                    <li class="active">
+                                        <div class="column">
+                                            <div class="icon"><i class="fas fa-user-friends"></i></div>
+                                            <div class="details">
+                                                <p>Friends</p>
+                                                <span>Your friends on Facebook</span>
+                                            </div>
+                                        </div>
+                                        <div class="radio"></div>
+                                    </li>
+                                    <li>
+                                        <div class="column">
+                                            <div class="icon"><i class="fas fa-user"></i></div>
+                                            <div class="details">
+                                                <p>Specific</p>
+                                                <span>Only show to some friends</span>
+                                            </div>
+                                        </div>
+                                        <div class="radio"></div>
+                                    </li>
+                                    <li>
+                                        <div class="column">
+                                            <div class="icon"><i class="fas fa-lock"></i></div>
+                                            <div class="details">
+                                                <p>Only me</p>
+                                                <span>Only you can see your post</span>
+                                            </div>
+                                        </div>
+                                        <div class="radio"></div>
+                                    </li>
+                                    <li>
+                                        <div class="column">
+                                            <div class="icon"><i class="fas fa-cog"></i></div>
+                                            <div class="details">
+                                                <p>Custom</p>
+                                                <span>Include and exclude friends</span>
+                                            </div>
+                                        </div>
+                                        <div class="radio"></div>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </div>
+
+    <!-- Buttom Content -->
+    <div class="Contant">
+        <p>
+            For 2021 fresh grades There an open vacancy "IT Support" Requirements -Cairo and Giza residence only -2020-2021 graduate -Education: Computer science -Experience: 0 years -Good knowledge at CCNA -Good knowledge at MCSA -Good command in English send your
+            CV hamr.emad@gmail.com
+        </p>
+    </div>
+
+    <!-- JavaScript Connection -->
+    <script src="..\Script\script.js"></script>
+</body>
+
+</html>
