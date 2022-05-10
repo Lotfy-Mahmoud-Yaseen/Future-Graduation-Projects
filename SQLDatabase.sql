@@ -1,3 +1,5 @@
+--Each section represent a table:
+--If you want to ask any question i am here.
 Create database FutureProjects
 use FutureProjects;
 -------------------------------------------------------------------
