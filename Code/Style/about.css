@@ -1,0 +1,14 @@
+.pdf {
+    align-content: center;
+    /* background-color: rgb(128, 118, 118); */
+    width: 100%;
+    height: 570px;
+}
+
+.pdf .dd {
+    position: absolute;
+    /* top: 50%; i put that for resune maybe i have to add somtheng*/
+    left: 15%;
+    width: 85%;
+    height: 100%;
+}
