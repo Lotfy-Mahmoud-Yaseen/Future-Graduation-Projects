@@ -284,10 +284,25 @@ body.dark .home .text {
 
 /* My Start Post Box */
 
+
+/* My Start Post Box */
+
+
+/* My Start Post Box */
+
+
+/* My Start Post Box */
+
+
+/* My Start Post Box */
+
+
+/* My Start Post Box */
+
 .Contant {
     position: absolute;
-    width: 60%;
-    left: 21%;
+    width: 89%;
+    left: 10%;
     display: block;
     top: 75%;
 }
@@ -314,3 +329,31 @@ body.dark .home .text {
 
 
 /* Stop */
+
+
+/* Phone */
+
+@media screen and (max-width:600px) {
+    .sidebar.close {
+        width: 55px;
+        padding: 0px 0px;
+    }
+    .Contant {
+        position: absolute;
+        width: 82%;
+        left: 16%;
+        top: 75%;
+    }
+    .container {
+        z-index: 10000000000;
+        position: absolute;
+        width: 65%;
+        height: 11%;
+    }
+    /* .container .inputs input {
+        border: none;
+        position: relative;
+        width: 90%;
+        left: 5%;
+    } */
+}
