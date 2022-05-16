@@ -345,7 +345,8 @@ body.dark .home .text {
         position: absolute;
         width: 82%;
         left: 16%;
-        top: 75%;
+        top: 80%;
+        font-size: 14px;
     }
     .container {
         z-index: 100;
