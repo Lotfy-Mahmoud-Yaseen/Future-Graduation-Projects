@@ -3,6 +3,4 @@ I Studying (MIS) at Future Academy eg, I Create this project as requirement to g
 
 https://lotfy-mahmoud-yaseen.github.io/Future-Graduation-Projects/    <br>
 1- Login <br>
-https://lotfy-mahmoud-yaseen.github.io/Future-Graduation-Projects/Code/index/Login.html <br>
-2- Home <br>
-https://lotfy-mahmoud-yaseen.github.io/Future-Graduation-Projects/Code/index/Home.html <br>
+https://lotfy-mahmoud-yaseen.github.io/Future-Graduation-Projects/Code/index/Login.html
