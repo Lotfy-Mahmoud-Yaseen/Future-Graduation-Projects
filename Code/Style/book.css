@@ -11,7 +11,7 @@
 
 .sidebar .menu .submenu {
     position: absolute;
-    left: 100%;
+    left: 95%;
     background-color: #fff;
     padding: 10px;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
