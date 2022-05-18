@@ -1,0 +1,38 @@
+.Write button {
+    position: relative;
+    left: 18%;
+    top: 0;
+    width: 300px;
+    font-size: 25px;
+    display: block;
+    padding: 0;
+    margin: 10px;
+}
+
+.sidebar .menu .submenu {
+    position: absolute;
+    left: 100%;
+    background-color: #fff;
+    padding: 10px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+    display: none;
+}
+
+.sidebar .submenu li {
+    padding: 10px;
+}
+
+.sidebar .submenu li a {
+    color: black;
+    text-decoration: none;
+}
+
+.sidebar .submenu li a:hover {
+    /* color: #F00; */
+}
+
+.sidebar #AA:hover .submenu {
+    display: inline-block;
+}
