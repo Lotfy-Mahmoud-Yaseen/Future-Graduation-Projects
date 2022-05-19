@@ -41,6 +41,9 @@ p {
     background-color: RoyalBlue;
 }
 
+
+/*  */
+
 @media screen and (max-width:600px) {
     .pdf {
         display: block;
@@ -58,7 +61,7 @@ p {
         font-size: 2rem;
         text-decoration: none;
         border-radius: 5px;
-        width: 88%;
+        width: 84%;
     }
     p {
         position: absolute;
