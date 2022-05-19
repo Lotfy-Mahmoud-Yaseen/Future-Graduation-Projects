@@ -1,35 +1,41 @@
-.Write button {
+.Write .aa {
     position: relative;
     left: 18%;
-    top: 0;
+    /* top: 70%; */
     width: 300px;
     font-size: 25px;
-    display: block;
+    display: inline-block;
     padding: 0;
     margin: 10px;
 }
 
 .sidebar .menu .submenu {
     position: absolute;
-    left: 95%;
+    left: 90%;
     background-color: #fff;
     padding: 10px;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
     -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
     box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
     display: none;
+    width: 230px;
+    font-size: 25px;
+    margin: 10px;
+    border: 2px solid;
 }
 
-.sidebar .submenu li {
-    padding: 10px;
+.sidebar .submenu i {
+    width: 210px;
+    padding: 5px;
+    border: 2px solid;
 }
 
-.sidebar .submenu li a {
+.sidebar .submenu i {
     color: black;
     text-decoration: none;
 }
 
-.sidebar .submenu li a:hover {
+.sidebar .submenu i a:hover {
     /* color: #F00; */
 }
 
