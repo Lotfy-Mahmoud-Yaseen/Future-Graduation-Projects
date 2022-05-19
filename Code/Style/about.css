@@ -42,6 +42,9 @@ p {
 }
 
 @media screen and (max-width:600px) {
+    .pdf {
+        display: block;
+    }
     .dd {
         display: block;
     }
