@@ -1,7 +1,18 @@
-.Write .aa {
-    position: relative;
+.Write .Down {
+    position: fixed;
     left: 18%;
-    /* top: 70%; */
+    top: 80%;
+    width: 300px;
+    font-size: 25px;
+    display: inline-block;
+    padding: 0;
+    margin: 10px;
+}
+
+.Write .Prin {
+    position: fixed;
+    left: 18%;
+    top: 88%;
     width: 300px;
     font-size: 25px;
     display: inline-block;
@@ -41,4 +52,49 @@
 
 .sidebar #AA:hover .submenu {
     display: inline-block;
+}
+
+
+/*  */
+
+
+/*  */
+
+
+/*  */
+
+.cont {
+    position: absolute;
+    top: 5%;
+    left: 18%;
+    display: block;
+    font-size: 25px;
+    color: #757575;
+}
+
+@media screen and (max-width:600px) {
+    .cont {
+        font-size: 15px;
+        top: 5%;
+    }
+    .Write .Down {
+        position: absolute;
+        left: 18%;
+        top: 90%;
+        width: 300px;
+        font-size: 25px;
+        display: inline-block;
+        padding: 0;
+        margin: 10px;
+    }
+    .Write .Prin {
+        position: absolute;
+        left: 18%;
+        top: 98%;
+        width: 300px;
+        font-size: 25px;
+        display: inline-block;
+        padding: 0;
+        margin: 10px;
+    }
 }
