@@ -42,11 +42,25 @@ p {
 }
 
 @media screen and (max-width:600px) {
-    .pdf {
+    .dd {
         display: block;
     }
     .download-btn {
         position: absolute;
-        top: 30%;
+        top: 35%;
+        left: 15%;
+        background-color: DodgerBlue;
+        color: white;
+        padding: 1rem 2rem;
+        font-size: 2rem;
+        text-decoration: none;
+        border-radius: 5px;
+        width: 88%;
+    }
+    p {
+        position: absolute;
+        top: 5%;
+        left: 20%;
+        width: 80%;
     }
 }
