@@ -287,18 +287,6 @@ body.dark .home .text {
 
 /* My Start Post Box */
 
-
-/* My Start Post Box */
-
-
-/* My Start Post Box */
-
-
-/* My Start Post Box */
-
-
-/* My Start Post Box */
-
 .Contant {
     position: absolute;
     width: 89%;
@@ -360,6 +348,9 @@ body.dark .home .text {
         width: 90%;
         left: 5%;
     } */
+    .sidebar .submenu i {
+        width: 220;
+    }
 }
 
 
@@ -380,14 +371,14 @@ body.dark .home .text {
     -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
     box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
     display: none;
-    width: 240px;
+    width: 230px;
     font-size: 25px;
     margin: 10px;
     border: 2px solid;
 }
 
 .sidebar .submenu i {
-    width: 230px;
+    width: 210px;
     padding: 5px;
     border: 2px solid;
 }
