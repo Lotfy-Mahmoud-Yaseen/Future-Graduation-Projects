@@ -215,6 +215,7 @@ input[type="submit"]:hover {
         width: 20px;
         height: 20px;
         z-index: 1;
+        display: none;
     }
     .container {
         top: 42%;
@@ -224,13 +225,13 @@ input[type="submit"]:hover {
         height: 38%;
         font-size: 12px;
     }
-    .container h1 {
+    /* .container h1 {
         display: none;
-    }
+    } */
     .g-signin2 {
         position: fixed;
         top: 110%;
-        left: 29%;
+        left: 30%;
     }
     input[type="submit"] {
         position: fixed;
