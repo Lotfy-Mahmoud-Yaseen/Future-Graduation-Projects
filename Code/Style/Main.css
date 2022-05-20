@@ -35,6 +35,11 @@ body {
 
 .Contant123 {
     display: none;
+    position: absolute;
+    top: 80%;
+    left: 18%;
+    font-size: 25px;
+    color: #757575;
 }
 
 .g-signin2 {
