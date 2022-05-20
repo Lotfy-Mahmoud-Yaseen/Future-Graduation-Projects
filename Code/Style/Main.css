@@ -150,10 +150,6 @@ input[type="submit"]:hover {
         background-attachment: fixed;
         background-repeat: no-repeat;
     }
-    /*     img {
-        height: 300px;
-        width: 300px;
-    } */
     .lol {
         display: inline;
         font-size: 63px;
@@ -173,6 +169,11 @@ input[type="submit"]:hover {
         width: 90%;
         font-size: 55px;
     }
+    .fuimg {
+        top: 1%;
+        left: 35%;
+        position: fixed;
+    }
     .container {
         top: 45%;
         left: 50%;
@@ -181,10 +182,61 @@ input[type="submit"]:hover {
         height: 32%;
         font-size: 25px;
     }
-    .fuimg {
-        top: 1%;
-        left: 35%;
+}
+
+@media screen and (max-width:600px) {
+    .lol {
+        display: inline;
+        font-size: 25px;
+        color: black;
+        padding: 15px;
+        position: absolute;
+        height: 10%;
+        width: 90%;
+        left: 5%;
+        right: 5%;
+        top: 0%;
+        z-index: 2;
+    }
+    .lol1 {
+        top: 66%;
+        left: 5%;
+        right: 5%;
         position: fixed;
+        width: 90%;
+        height: 33%;
+        font-size: 20px;
+    }
+    .fuimg {
+        position: absolute;
+        top: 0%;
+        left: 16%;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        z-index: 1;
+    }
+    .container {
+        top: 42%;
+        left: 50%;
+        position: absolute;
+        width: 70%;
+        height: 38%;
+        font-size: 12px;
+    }
+    .container h1 {
+        display: none;
+    }
+    .g-signin2 {
+        position: fixed;
+        top: 110%;
+        left: 29%;
+    }
+    input[type="submit"] {
+        position: fixed;
+        top: 70%;
+        left: 12%;
+        width: 75%;
     }
 }
 
