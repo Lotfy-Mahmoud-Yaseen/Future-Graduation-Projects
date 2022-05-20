@@ -9,7 +9,7 @@
 body {
     font-family: "convergence", sans-serif;
     display: grid;
-    background-image: url("../../icons/banner.jpg");
+    /* background-image: url("../../icons/banner.jpg"); */
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -143,7 +143,7 @@ input[type="submit"]:hover {
 
 @media screen and (max-width:980px) {
     body {
-        background-image: url("../../icons/bannercat1.jpg");
+        /* background-image: url("../../icons/bannercat1.jpg"); */
         /* background-image: url("../img/bannercat.jpg"); */
         background-size: cover;
         background-attachment: fixed;
