@@ -349,7 +349,7 @@ body.dark .home .text {
         left: 5%;
     } */
     .sidebar .menu .submenu {
-        /* width: 240; */
+        width: 240;
     }
     .sidebar .submenu i {
         width: 230;
