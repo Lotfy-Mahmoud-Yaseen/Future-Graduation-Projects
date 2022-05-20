@@ -142,10 +142,11 @@ input[type="submit"]:hover {
     color: #6a4949; */
 }
 
-@media screen and (max-width:980px) {
+
+/* @media screen and (max-width:980px) {
     body {
-        /* background-image: url("../../icons/bannercat1.jpg"); */
-        /* background-image: url("../img/bannercat.jpg"); */
+        background-image: url("../../icons/bannercat1.jpg");
+        background-image: url("../img/bannercat.jpg");
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
@@ -159,7 +160,6 @@ input[type="submit"]:hover {
         left: 5%;
         right: 5%;
         position: fixed;
-        /* background: green;   */
     }
     .lol1 {
         top: 62%;
@@ -182,12 +182,12 @@ input[type="submit"]:hover {
         height: 32%;
         font-size: 25px;
     }
-}
+} */
 
 @media screen and (max-width:600px) {
     .lol {
         display: inline;
-        font-size: 25px;
+        font-size: 24px;
         color: black;
         padding: 15px;
         position: absolute;
@@ -196,7 +196,7 @@ input[type="submit"]:hover {
         left: 5%;
         right: 5%;
         top: 0%;
-        z-index: 2;
+        /* z-index: 2; */
     }
     .lol1 {
         top: 66%;
