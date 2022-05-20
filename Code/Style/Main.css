@@ -21,10 +21,10 @@ body {
 .data {
     display: none;
     position: absolute;
-    left: 60%;
-    top: 20%;
+    left: 70%;
+    top: 1%;
     color: #757575;
-    font-size: 15px;
+    font-size: 10px;
 }
 
 .sidebar {
