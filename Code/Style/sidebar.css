@@ -310,7 +310,7 @@ body.dark .home .text {
     text-align: center;
 }
 
-.container {
+.container123 {
     position: absolute;
     width: 50%;
     height: 15%;
@@ -323,7 +323,7 @@ body.dark .home .text {
     border-radius: 10px;
 }
 
-.container .inputs input {
+.container123 .inputs input {
     border: none;
     position: relative;
     width: 90%;
@@ -348,7 +348,7 @@ body.dark .home .text {
         top: 80%;
         font-size: 13px;
     }
-    .container {
+    .container123 {
         z-index: 100;
         position: absolute;
         width: 65%;

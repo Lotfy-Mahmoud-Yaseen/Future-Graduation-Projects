@@ -15,27 +15,58 @@ body {
     background-repeat: no-repeat;
 }
 
+
+/* Big */
+
+.data {
+    display: none;
+    position: absolute;
+    left: 20%;
+    top: 30%;
+}
+
+.sidebar {
+    display: none;
+}
+
+.container123 {
+    display: none;
+}
+
+.Contant123 {
+    display: none;
+}
+
+.g-signin2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+
+/* Big */
+
 .lol {
     margin: 5px;
-    /* top: 1%; */
-    font-size: 40px;
+    font-size: 37px;
     width: 37%;
+    height: 16%;
     padding: 30px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
     border-radius: 30px;
-    /* top: 75%;
-    left: 75%;
-    position: absolute; */
     box-sizing: border-box;
 }
 
 .lol1 {
     font-size: 40px;
     width: 37%;
-    padding: 20px;
+    height: 63%;
+    padding: 15px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
     border-radius: 30px;
-    top: 40%;
+    top: 35%;
     left: 62%;
     position: absolute;
     box-sizing: border-box;
@@ -43,7 +74,7 @@ body {
 
 .container {
     width: 23%;
-    height: 50%;
+    height: 45%;
     padding: 20px;
     border-radius: 30px;
     top: 40%;
@@ -83,24 +114,27 @@ input[type="submit"]:hover {
     color: #6a4949;
 }
 
+.g-signin2 {
+    width: 75%;
+    height: 50px;
+    border: 2px solid;
+    background: white;
+    border-radius: 25px;
+    font-size: 25px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 95%;
+    left: 27%;
+}
 
-/* .signup_link {
-    margin: 30px 0;
-    text-align: center;
-    font-size: 16px;
-    color: #666666;
-} */
-
-
-/* .signup_link a {
-    color: #2691d9;
-    text-decoration: none;
-} */
-
-
-/* .signup_link a:hover {
-    text-decoration: underline;
-} */
+.g-signin2:hover {
+    /* border-color: #161111;
+    transition: .5s;
+    color: #6a4949; */
+}
 
 @media screen and (max-width:980px) {
     body {
