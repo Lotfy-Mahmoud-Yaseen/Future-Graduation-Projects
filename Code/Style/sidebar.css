@@ -348,12 +348,8 @@ body.dark .home .text {
         width: 90%;
         left: 5%;
     } */
-    .sidebar .menu .submenu {
-        width: 240;
-        font-size: 22px;
-    }
     .sidebar .submenu i {
-        width: 230;
+        font-size: 23px;
     }
 }
 
