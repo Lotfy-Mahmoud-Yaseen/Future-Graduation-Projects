@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="../Style/style.css">
     <link rel="stylesheet" href="../Style/sidebar.css">
     <link rel="stylesheet" href="../Style/projects.css">
+    <!----======== NewCSS ======== -->
+    <link rel="stylesheet" href="..\Style\post.css">
+    <link rel="stylesheet" href="..\Style\team.css">
 
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -151,7 +154,97 @@
         </div>
     </nav>
 
-    <!-- Projects -->
+    <!-- Creating Team -->
+    <label class="add">
+            <strong style="font-size: 30px;">Hi:</strong> dont create a team if you dont sure about any information
+            cuse this will make a problime, First talk with your friends
+            and when you are ready create it.
+            <br>aftre that you have to Upload The <strong style="font-size: 25px;">Proposel, Presentation, Discussion</strong> PDF files.
+            <br>and you have to Upload your project on <strong style="font-size: 25px;">GitHub</strong> and add the link here.
+        </label>
+
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="close-btn" onclick="togglepopup()">&times;
+            </div>
+            <!--  -->
+            <div class="wrapper">
+                <div class="title">
+                    Creating Team
+                </div>
+                <div class="form">
+                    <div class="inputfield">
+                        <label>Team Name</label>
+                        <input type="text" class="input">
+                    </div>
+                    <div class="inputfield">
+                        <label>Project Name</label>
+                        <input type="text" class="input">
+                    </div>
+
+                    <div class="inputfield">
+                        <label>Programing Framwork</label>
+                        <div class="custom_select">
+                            <select>
+                                    <option value="">Select</option>
+                                    <option value="">Angolar JS</option>
+                                    <option value="">Dgango Py</option>
+                                    <option value="">.NET</option>
+                                    <option value="">ASP.NET</option>
+                                </select>
+                        </div>
+                    </div>
+
+                    <div class="inputfield">
+                        <label>Team Leader Phone Number</label>
+                        <input type="text" class="input">
+                    </div>
+                    <div class="inputfield">
+                        <label>Assistant ID</label>
+                        <input type="text" class="input">
+                    </div>
+                    <div class="inputfield">
+                        <label>Member One ID</label>
+                        <input type="text" class="input">
+                    </div>
+                    <div class="inputfield">
+                        <label>Member Tow ID</label>
+                        <input type="text" class="input">
+                    </div>
+                    <div class="inputfield">
+                        <label>Member Three ID</label>
+                        <input type="text" class="input">
+                    </div>
+
+                    <div class="inputfield">
+                        <label>Graduation Project Introduction</label>
+                        <textarea class="textarea"></textarea>
+                    </div>
+
+                    <div class="inputfield terms">
+                        <label class="check">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                        <p>These information are very importent be sure After click on Create button, Will send an Email for the team. To make sure they are join the team.</p>
+                    </div>
+
+                    <div class="inputfield">
+                        <input type="submit" value="Create" class="btn">
+                    </div>
+
+                </div>
+            </div>
+            <!--  -->
+            <!--  -->
+            <!--  -->
+            <!--  -->
+        </div>
+    </div>
+    <button onclick="togglepopup()"> Create Team</button>
+
+    <!-- Upload -->
     <div class="Upload">
         <button>
             <i class='bx bx-upload'></i>
@@ -175,6 +268,7 @@
 
     <!-- JavaScript Connection -->
     <script src="../Script/script.js" async defer></script>
+    <script src="../Script/team.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
