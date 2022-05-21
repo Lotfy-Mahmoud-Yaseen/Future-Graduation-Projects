@@ -350,7 +350,8 @@ button {
     margin-bottom: 0;
 }
 
-@media (max-width:420px) {
+
+/* @media (max-width:420px) {
     .wrapper .form .inputfield {
         flex-direction: column;
         align-items: flex-start;
@@ -361,7 +362,7 @@ button {
     .wrapper .form .inputfield.terms {
         flex-direction: row;
     }
-}
+} */
 
 
 /* Phone Fetures */
@@ -376,8 +377,8 @@ button {
         z-index: 1000;
     }
     button {
-        position: absolute;
-        left: 22%;
+        position: relative;
+        left: 18%;
         top: 20%;
         width: 75%;
     }
@@ -392,19 +393,16 @@ button {
         position: absolute;
         left: 18%;
         width: 79%;
-        top: 4%;
+        top: 50%;
         color: #757575;
         font-size: 15px;
         text-align: center;
     }
-    .add1 {
-        display: block;
-        position: absolute;
+    .Upload button {
+        position: relative;
         left: 18%;
-        width: 79%;
-        top: 29%;
-        color: #757575;
-        font-size: 15px;
-        text-align: center;
+        top: 30%;
+        width: 75%;
+        display: inline;
     }
 }
