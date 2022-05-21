@@ -62,7 +62,7 @@ button {
 
 .popup .content {
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     background: #fff;
@@ -98,7 +98,74 @@ button {
 }
 
 
-/*  */
+/* Git */
+
+.Git .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    /* background: rgba(0, 0, 0, 0.7); */
+    z-index: 1;
+    display: none;
+}
+
+.Git .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 450px;
+    height: 180px;
+    z-index: 10000000000000000000000;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid;
+    font-size: 17px;
+}
+
+.Git .close-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.Git.active .overlay {
+    display: block;
+}
+
+.Git.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.Git .inputfield .input {
+    position: relative;
+    width: 100%;
+    border: 1px solid;
+    margin: 5px;
+    font-size: 20px;
+}
+
+.Git .inputfield .btn {
+    position: relative;
+    width: 100%;
+    margin: 5px;
+    font-size: 20px;
+}
 
 
 /*  */
