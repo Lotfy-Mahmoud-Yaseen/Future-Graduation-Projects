@@ -110,7 +110,21 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             </div>
         </nav>
         <!--  -->
-    
+            <!-- Creating Post -->
+    <div class="container123">
+        <center>
+            <div class="inputs">
+                <input type="text" onclick="togglepopup()">
+            </div>
+            <div class="popup" id="popup-1">
+                <div class="overlay"></div>
+                <div class="content">
+                    <!-- Popup Content -->
+                </div>
+            </div>
+        </center>
+    </div>
+    <!--  -->
     
     <!-- Name and Logout -->
     <h1 class="BBB">Hello, <?php echo $_SESSION['name']; ?></h1>
@@ -120,7 +134,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     You Welcome in our website we hope a good Graduation Project to you and your team.
     <br>Enjoy and make some knowledge and experience for your carrer.
     <br>After you end your Graduation Project please give us feedback.
-</div>
+</div>  
 
         <!-- JavaScript Connection -->
         <script src="../Script/script.js" async defer></script>
