@@ -1,0 +1,19 @@
+.Data {
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    width: 50%;
+    height: 60%;
+    padding: 5px;
+    font-size: 25px;
+    color: #757575;
+}
+
+@media screen and (max-width:600px) {
+    .Data {
+        left: 18%;
+        width: 82%;
+        font-size: 22px;
+    }
+}

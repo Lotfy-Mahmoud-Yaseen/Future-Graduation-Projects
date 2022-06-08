@@ -1,0 +1,29 @@
+.BBB {
+    position: absolute;
+    padding: 0%;
+    margin: 0%;
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    left: 35%;
+    top: 78%;
+    color: #757575;
+}
+
+.AContant {
+    position: absolute;
+    padding: 0%;
+    margin: 0%;
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    left: 49%;
+    top: 78%;
+    color: #757575;
+}
+
+@media screen and (max-width:600px) {
+    .BBB {
+        text-align: center;
+    }
+}

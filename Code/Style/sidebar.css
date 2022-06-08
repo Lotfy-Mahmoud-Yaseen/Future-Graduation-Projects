@@ -1,6 +1,3 @@
-/* Sidebar */
-
-
 /* The body propertis with dark */
 
 body.dark {
@@ -350,6 +347,13 @@ body.dark .home .text {
     } */
     .sidebar .submenu i {
         font-size: 23px;
+    }
+    .Contant {
+        position: absolute;
+        width: 80%;
+        left: 10%;
+        top: 70%;
+        font-size: 20px;
     }
 }
 
