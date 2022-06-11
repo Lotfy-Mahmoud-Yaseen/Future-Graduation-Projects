@@ -172,7 +172,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
         <!-- Name and Logout -->
         <h2 class="BBB">Hello,
-            <?php echo $_SESSION['name'] . $stuID; ?>
+            <?php echo $_SESSION['name']; ?>
         </h2>
 
 
