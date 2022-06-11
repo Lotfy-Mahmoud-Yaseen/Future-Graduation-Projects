@@ -112,7 +112,7 @@
     <!-- Getting Data -->
 <div class="Data">
     <?php
-        $Q = "SELECT * FROM project WHERE teamLID OR ass_ID OR m1_ID OR m2_ID OR m3_ID = $stuID;";
+        $Q = "SELECT * FROM project WHERE  teamLID OR ass_ID OR m1_ID OR m2_ID OR m3_ID = $stuID;";
         $result = mysqli_query($conn, $Q);
         $resultCheck = mysqli_num_rows($result);
 
@@ -126,6 +126,7 @@
             "Member ID:" . " " . $row['m1_ID'] . "<br>" . 
             "Member ID:" . " " . $row['m2_ID'] . "<br>" . 
             "Member ID:" . " " . $row['m3_ID']  . "<br>" . 
+            "GitHub Link:" . " " . $row['gitLink'] . "<br>" .
             "Introduction:" . " " . $row['intro'];
         }
         }   

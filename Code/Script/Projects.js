@@ -2,6 +2,9 @@ function togglePopup() {
     document.getElementById("popup-1").classList.toggle("active");
 }
 
+function CrTeam() {
+    document.getElementById("CrTeam-1").classList.toggle("active");
+}
 
 function git() {
     document.getElementById("Git-1").classList.toggle("active");

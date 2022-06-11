@@ -1,7 +1,6 @@
 <?php
     error_reporting(0);
     include "H.php";
-    // include "db_conn.php";
     $conn = mysqli_connect('localhost', 'root', '', 'fgp');
     // if($conn){
     //     echo 'success';
@@ -74,7 +73,7 @@
         <link rel="stylesheet" href="../Style/style.css">
         <link rel="stylesheet" href="../Style/sidebar.css">
         <link rel="stylesheet" href="../Style/proTeam.css">
-        <link rel="stylesheet" href="../Style/proGit1.css">
+        <link rel="stylesheet" href="../Style/proGit.css">
         <link rel="stylesheet" href="../Style/proUpload.css">
         
         <!----===== Boxicons CSS ===== -->
@@ -177,7 +176,7 @@
             <br>Aftre that you have to Upload The <strong style="font-size: 25px;">Proposel, Presentation, Discussion</strong> PDF files.
             <br>And you can Update PDF files anytime.
             <br>and you have to Upload your project on <strong style="font-size: 25px;">GitHub</strong> and add the link here.
-            <br>Hi: this is a guide for you to make a good Graduation book <br> you have to read <strong>About PDF</strong> and to build your Project on System Development life cycle <strong>(SDLC).</strong>
+            <br>Hi: this is a guide for you to make a good Graduation book <br> you have to read <a href="About.html"><strong>About PDF</strong></a> and to build your Project on System Development life cycle <strong>(SDLC).</strong>
             <br> there are six chapters in the Graduation Book.<br>
                 <strong>Chapter One:</strong> Contain The Book Introduction<br>
                 <strong>Chapter Two:</strong> Contain The Project Planning, Analysis<br>
@@ -190,7 +189,7 @@
 
         <!-- Buttons -->
         <div class="Upload">
-            <button class="T" onclick="togglepopup()">Create Team</button>
+            <button class="T" onclick="CrTeam()">Create Team</button>
 
             <button class="T" onclick="togglePOP()">
                 <i class='bx bx-upload'></i>
@@ -219,10 +218,10 @@
         </div>
 
         <!-- Creating Team -->
-        <div class="popup" id="popup-1">
+        <div class="popup" id="CrTeam-1">
             <div class="overlay"></div>
             <div class="CrTeam">
-                <div class="close-btn" onclick="togglePopup()">&times;</div>
+                <div class="close-btn" onclick="CrTeam()">&times;</div>
                 <!-- <div class="close-btn" onclick="git()">&times;</div> -->
                 <form action="Projects.php" method="POST">
 

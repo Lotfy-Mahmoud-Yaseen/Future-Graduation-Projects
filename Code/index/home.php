@@ -1,6 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
+// include "H.php";
 
 $LL = $_SESSION['name'];
 $stuID = $_SESSION['id'];
