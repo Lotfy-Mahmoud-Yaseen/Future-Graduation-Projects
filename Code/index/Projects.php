@@ -222,7 +222,6 @@
             <div class="overlay"></div>
             <div class="CrTeam">
                 <div class="close-btn" onclick="CrTeam()">&times;</div>
-                <!-- <div class="close-btn" onclick="git()">&times;</div> -->
                 <form action="Projects.php" method="POST">
 
                     <div class="title">Creating Team</div>
@@ -291,7 +290,7 @@
                     <h1>Project GitHub Link</h1>
                     <div class="inputfield">
                         <!-- <label></label> -->
-                        <input type="text" name="gitLink" class="input" required>
+                        <input type="url" name="gitLink" class="input" required>
                     </div>
 
                     <div class="inputfield">
@@ -361,7 +360,7 @@
 
         <!-- JavaScript Connection -->
         <script src="../Script/script.js" async defer></script>
-        <script src="../Script/Projects.js"></script>
+        <script src="../Script/project.js"></script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
