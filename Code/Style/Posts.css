@@ -1,0 +1,105 @@
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content {
+    position: absolute;
+    top: 100%;
+    left: 60%;
+    transform: translate(-50%, -50%) scale(0);
+    /* background: #fff; */
+    background-color: var(--body-color);
+    width: 600px;
+    height: 300px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.T {
+    cursor: pointer;
+}
+
+.popup .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+/* inside */
+
+.popup .content label {
+    display: block;
+    font-size: 30px;
+    color: #707070;
+}
+
+.popup .content textarea {
+    position: absolute;
+    padding: 0%;
+    margin: 0%;
+    top: 20%;
+    left: 10%;
+    width: 500px;
+    height: 200px;
+    border: 2px solid black;
+    font-size: 20px;
+    background-color: var(--body-color);
+}
+
+.popup .content input {
+    position: absolute;
+    padding: 0%;
+    margin: 0%;
+    top: 88%;
+    left: 10%;
+    width: 500px;
+    font-size: 20px;
+}
+
+@media screen and (max-width:600px) {
+    .popup .content {
+        width: 370px;
+        height: 300px;
+        left: 46%;
+        top: 200%;
+    }
+    .popup .content textarea {
+        width: 340px;
+        height: 200px;
+        left: 5%;
+        font-size: 17px;
+    }
+    .popup .content input {
+        width: 340px;
+        left: 5%;
+    }
+}

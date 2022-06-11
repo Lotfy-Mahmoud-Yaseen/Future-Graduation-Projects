@@ -1,9 +1,19 @@
 /* Projects Page Content */
 
+.Upload {
+    position: absolute;
+    width: 20%;
+    height: 51%;
+    top: 15%;
+    left: 13%;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
 .Upload button {
     position: relative;
-    left: 10%;
-    top: 10%;
+    left: 4%;
     width: 230px;
     font-size: 25px;
     display: block;
@@ -11,7 +21,8 @@
     margin: 10px;
 }
 
-button {
+
+/* button {
     position: relative;
     left: 10%;
     top: 0%;
@@ -20,7 +31,7 @@ button {
     display: block;
     padding: 0;
     margin: 10px;
-}
+} */
 
 .chance {
     position: absolute;
@@ -115,9 +126,6 @@ button {
 }
 
 
-/*  */
-
-
 /* Phone Fetures */
 
 @media screen and (max-width:600px) {
@@ -143,12 +151,21 @@ button {
         font-size: 15px;
         text-align: center;
     }
+    .Upload {
+        z-index: 100;
+        position: absolute;
+        left: 18%;
+        top: 6%;
+        width: 79%;
+        height: 55%;
+    }
     .Upload button {
         position: relative;
-        left: 18%;
-        top: 30%;
-        width: 75%;
+        /* left: 18%; */
+        top: 0%;
+        /* width: %; */
         display: inline;
+        margin: 5px;
     }
     .Git .content {
         width: 400px;

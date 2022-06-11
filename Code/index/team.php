@@ -1,5 +1,6 @@
 <?php
     $conn = mysqli_connect('localhost', 'root', '', 'fgp');
+    include "H.php";
 ?>
 
 <!DOCTYPE html>
@@ -111,7 +112,7 @@
     <!-- Getting Data -->
 <div class="Data">
     <?php
-        $Q = "SELECT * FROM project WHERE proID='77';";
+        $Q = "SELECT * FROM project WHERE teamLID OR ass_ID OR m1_ID OR m2_ID OR m3_ID = $stuID;";
         $result = mysqli_query($conn, $Q);
         $resultCheck = mysqli_num_rows($result);
 

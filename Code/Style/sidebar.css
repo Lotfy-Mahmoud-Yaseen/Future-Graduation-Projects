@@ -284,79 +284,6 @@ body.dark .home .text {
 
 /* My Start Post Box */
 
-.Contant {
-    position: absolute;
-    width: 89%;
-    left: 10%;
-    display: block;
-    top: 84%;
-    color: #707070;
-    font-size: 20px;
-    text-align: center;
-}
-
-.container123 {
-    position: absolute;
-    width: 50%;
-    height: 15%;
-    top: 15%;
-    left: 25%;
-    /* transform: translate(-50%, -50%); */
-    /* box-sizing: border-box; */
-    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.container123 .inputs input {
-    border: none;
-    position: relative;
-    width: 90%;
-    left: 6%;
-}
-
-
-/* Stop */
-
-
-/* Phone */
-
-@media screen and (max-width:600px) {
-    .sidebar.close {
-        width: 55px;
-        padding: 0px 0px;
-    }
-    .Contant123 {
-        position: absolute;
-        width: 82%;
-        left: 16%;
-        top: 80%;
-        font-size: 13px;
-    }
-    .container123 {
-        z-index: 100;
-        position: absolute;
-        width: 65%;
-        height: 11%;
-    }
-    /* .container .inputs input {
-        border: none;
-        position: relative;
-        width: 90%;
-        left: 5%;
-    } */
-    .sidebar .submenu i {
-        font-size: 23px;
-    }
-    .Contant {
-        position: absolute;
-        width: 80%;
-        left: 10%;
-        top: 70%;
-        font-size: 20px;
-    }
-}
-
 
 /* Submenu */
 
@@ -398,4 +325,21 @@ body.dark .home .text {
 
 .sidebar #AA:hover .submenu {
     display: inline-block;
+}
+
+@media screen and (max-width:600px) {
+    .sidebar.close {
+        width: 55px;
+        padding: 0px 0px;
+    }
+    .sidebar .submenu i {
+        font-size: 23px;
+    }
+    .Contant {
+        position: absolute;
+        width: 80%;
+        left: 10%;
+        top: 70%;
+        font-size: 20px;
+    }
 }

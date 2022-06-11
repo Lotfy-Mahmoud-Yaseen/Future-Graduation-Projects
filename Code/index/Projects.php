@@ -1,55 +1,70 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', '', 'fgp');
-// if($conn){
-//     echo 'success';
-// }else{
-//     echo 'Fail';
-// }
-if(!$conn){ echo 'Error' . mysqli_connect_error(); }
+    error_reporting(0);
+    include "H.php";
+    // include "db_conn.php";
+    $conn = mysqli_connect('localhost', 'root', '', 'fgp');
+    // if($conn){
+    //     echo 'success';
+    // }else{
+    //     echo 'Fail';
+    // }
+    if(!$conn){ echo 'Error' . mysqli_connect_error(); }
 
-error_reporting(0);
+    $teamLID =     $_POST['teamLID'];
+    $proName =      $_POST['proName'];    
+    $proFramwork =  $_POST['proFramwork'];
+    $teamLPhone =   $_POST['teamLPhone'];
+    $ass_ID =       $_POST['ass_ID'];
+    $m1_ID =        $_POST['m1_ID'];
+    $m2_ID =        $_POST['m2_ID'];
+    $m3_ID =        $_POST['m3_ID'];
+    $intro =        $_POST['intro'];
 
-$teamLID =     $_POST['teamLID'];
-$proName =      $_POST['proName'];    
-$proFramwork =  $_POST['proFramwork'];
-$teamLPhone =   $_POST['teamLPhone'];
-$ass_ID =       $_POST['ass_ID'];
-$m1_ID =        $_POST['m1_ID'];
-$m2_ID =        $_POST['m2_ID'];
-$m3_ID =        $_POST['m3_ID'];
-$intro =        $_POST['intro'];
-
-if(isset($_POST['submit'])){
-    $sql = "INSERT INTO project(teamLID, proName, proFramwork, teamLPhone, ass_ID,
-    m1_ID, m2_ID, m3_ID, intro) 
-    VALUES('$teamLID', '$proName', '$proFramwork', '$teamLPhone', '$ass_ID', 
-    '$m1_ID', '$m2_ID', '$m3_ID', '$intro')";
-    
-    mysqli_query($conn, $sql);
-}
+    if(isset($_POST['submit'])){
+        $sql = "INSERT INTO project(teamLID, proName, proFramwork, teamLPhone, ass_ID,
+        m1_ID, m2_ID, m3_ID, intro) 
+        VALUES('$teamLID', '$proName', '$proFramwork', '$teamLPhone', '$ass_ID', 
+        '$m1_ID', '$m2_ID', '$m3_ID', '$intro')";
+        mysqli_query($conn, $sql);
+    }
 
 
-// Add Link Space
-$gitLink=   $_POST['gitLink'];
+    // Add Link
+    $gitLink=   $_POST['gitLink'];
+    if(isset($_POST['submit1'])){
+        $gL = "UPDATE project SET gitLink='$gitLink' WHERE teamLID= $stuID";
+        mysqli_query($conn, $gL);
+    }
 
-if(isset($_POST['submit1'])){
-    $S = "INSERT INTO link(gitLink) VALUES('$gitLink')";
-    
-    mysqli_query($conn, $S);
-}
-
-// About Upload
-$Ffile =     $_POST['Ffile'];
-if(isset($_POST['Upload1'])){
-    $Up = "INSERT INTO pdf_file(Ffile) 
-    VALUES('$Ffile')";
-    mysqli_query($conn, $Up);
-}
+    // Upload Pro
+    $Pro =     $_POST['Pro'];
+    if(isset($_POST['Upload1'])){
+        $Up = "UPDATE project SET Pro='$Pro' WHERE teamLID= $stuID";
+        mysqli_query($conn, $Up);
+    }
+    // Upload Pre
+    $Pre =     $_POST['Pre'];
+    if(isset($_POST['Upload2'])){
+        $Up1 = "UPDATE project SET Pre='$Pre' WHERE teamLID= $stuID";
+        mysqli_query($conn, $Up1);
+    }
+    // Upload Dis
+    $Dis =     $_POST['Dis'];
+    if(isset($_POST['Upload3'])){
+        $Up2 = "UPDATE project SET Dis='$Dis' WHERE teamLID= $stuID";
+        mysqli_query($conn, $Up2);
+    }
+    // Upload book
+    $book =     $_POST['book'];
+    if(isset($_POST['Upload4'])){
+        $Up3 = "UPDATE project SET book='$book' WHERE teamLID= $stuID";
+        mysqli_query($conn, $Up3);
+    }
 
 ?>
-    <!DOCTYPE html>
-    <html lang="en">
-
+<!DOCTYPE html>
+<html lang="en">
+    
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,10 +74,9 @@ if(isset($_POST['Upload1'])){
         <link rel="stylesheet" href="../Style/style.css">
         <link rel="stylesheet" href="../Style/sidebar.css">
         <link rel="stylesheet" href="../Style/proTeam.css">
-        <link rel="stylesheet" href="../Style/proGit.css">
+        <link rel="stylesheet" href="../Style/proGit1.css">
         <link rel="stylesheet" href="../Style/proUpload.css">
-        <!-- <link rel="stylesheet" href="../Style/book.css"> -->
-
+        
         <!----===== Boxicons CSS ===== -->
         <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
         <!-- FontAweome CDN Link for Icons -->
@@ -160,7 +174,8 @@ if(isset($_POST['Upload1'])){
             <strong style="font-size: 30px;">Hi:</strong> dont create a team if you dont sure about any information
             cuse this will make a problime, First talk with your friends
             and when you are ready create it.
-            <br>aftre that you have to Upload The <strong style="font-size: 25px;">Proposel, Presentation, Discussion</strong> PDF files.
+            <br>Aftre that you have to Upload The <strong style="font-size: 25px;">Proposel, Presentation, Discussion</strong> PDF files.
+            <br>And you can Update PDF files anytime.
             <br>and you have to Upload your project on <strong style="font-size: 25px;">GitHub</strong> and add the link here.
             <br>Hi: this is a guide for you to make a good Graduation book <br> you have to read <strong>About PDF</strong> and to build your Project on System Development life cycle <strong>(SDLC).</strong>
             <br> there are six chapters in the Graduation Book.<br>
@@ -295,7 +310,7 @@ if(isset($_POST['Upload1'])){
                 <!--  -->
                 <h1 class="S">Proposel PDF</h1>
                 <form action="Projects.php" method="POST">
-                    <input type="File" name="Ffile" value="SSS">
+                    <input type="File" name="Pro" value="SSS">
                     <input type="submit" class="Btn" name="Upload1" value="Upload1">
                 </form>
             </div>
@@ -309,8 +324,8 @@ if(isset($_POST['Upload1'])){
                 <!--  -->
                 <h1 class="S">Presentation PDF</h1>
                 <form action="Projects.php" method="POST">
-                    <input type="File" name="Ffile" value="SSS">
-                    <input type="submit" class="Btn" name="Upload1" value="Upload1">
+                    <input type="File" name="Pre" value="SSS">
+                    <input type="submit" class="Btn" name="Upload2" value="Upload1">
                 </form>
             </div>
         </div>
@@ -323,11 +338,12 @@ if(isset($_POST['Upload1'])){
                 <!--  -->
                 <h1 class="S">Discussion PDF</h1>
                 <form action="Projects.php" method="POST">
-                    <input type="File" name="Ffile" value="SSS">
-                    <input type="submit" class="Btn" name="Upload1" value="Upload1">
+                    <input type="File" name="Dis" value="SSS">
+                    <input type="submit" class="Btn" name="Upload3" value="Upload1">
                 </form>
             </div>
         </div>
+        
         <!-- Upload Book -->
         <div class="POP3" id="POP3-1">
             <div class="over3"></div>
@@ -335,13 +351,13 @@ if(isset($_POST['Upload1'])){
                 <div class="close-btn" onclick="togglePOP3()">&times;</div>
                 <!--  -->
                 <h1 class="S">Book PDF</h1>
+                <h5>Upload or Update the book</h5>
                 <form action="Projects.php" method="POST">
-                    <input type="File" name="Ffile" value="SSS">
-                    <input type="submit" class="Btn" name="Upload1" value="Upload1">
+                    <input type="File" name="book" value="SSS">
+                    <input type="submit" class="Btn" name="Upload4" value="Upload1">
                 </form>
             </div>
         </div>        
-
 
 
         <!-- JavaScript Connection -->
@@ -352,4 +368,4 @@ if(isset($_POST['Upload1'])){
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </body>
 
-    </html>
+</html>

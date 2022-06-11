@@ -1,0 +1,146 @@
+/* Create Post */
+
+.container123 {
+    position: absolute;
+    width: 50%;
+    height: 15%;
+    top: 8%;
+    left: 20%;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.Contant {
+    position: absolute;
+    width: 89%;
+    left: 10%;
+    display: block;
+    top: 84%;
+    color: #707070;
+    font-size: 20px;
+    text-align: center;
+}
+
+.container123 h3 {
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    display: inline-block;
+    color: #707070;
+}
+
+.container123 h4 {
+    position: absolute;
+    top: 65%;
+    left: 25%;
+    font-size: 20px;
+    color: #707070;
+}
+
+.container123 .inputs input {
+    border: none;
+    /* position: relative; */
+    position: absolute;
+    width: 90%;
+    left: 6%;
+    top: 35%;
+}
+
+.show {
+    position: absolute;
+    width: 50%;
+    height: 73%;
+    top: 62%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    padding: 20px;
+    border-radius: 10px;
+    color: #757575;
+    font-size: 15px;
+}
+
+
+/* Some */
+
+.BBB {
+    position: absolute;
+    padding: 0%;
+    margin: 0%;
+    font-size: 25px;
+    left: 80%;
+    top: 8%;
+    color: #757575;
+}
+
+.AContant {
+    position: absolute;
+    padding: 0%;
+    margin: 0%;
+    text-align: center;
+    width: 29%;
+    height: 50px;
+    font-size: 25px;
+    left: 71%;
+    top: 12%;
+    color: #757575;
+}
+
+
+/* Phone */
+
+@media screen and (max-width:600px) {
+    .Contant123 {
+        position: absolute;
+        width: 82%;
+        left: 16%;
+        top: 80%;
+        font-size: 13px;
+    }
+    .container123 {
+        z-index: 100;
+        position: absolute;
+        left: 18%;
+        width: 80%;
+        height: 11%;
+    }
+    .container123 h3 {
+        font-size: 10px;
+        position: absolute;
+        left: 1%;
+        top: 5%;
+    }
+    .container123 h4 {
+        font-size: 10px;
+        left: 10%;
+        top: 70%;
+    }
+    .show {
+        /* z-index: 100; */
+        position: absolute;
+        top: 46%;
+        left: 57.5%;
+        width: 80%;
+        height: 50%;
+    }
+    .BBB {
+        text-align: center;
+        width: 150px;
+        height: 50px;
+        font-size: 25px;
+        left: 36%;
+        top: 70%;
+    }
+    .AContant {
+        position: absolute;
+        padding: 0%;
+        margin: 0%;
+        width: 330px;
+        height: 50px;
+        font-size: 25px;
+        left: 15%;
+        top: 75%;
+    }
+}
