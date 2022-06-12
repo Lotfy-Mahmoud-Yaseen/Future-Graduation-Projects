@@ -165,8 +165,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             
             if ($resultCheck > 0){
                 while ($row = mysqli_fetch_assoc($result)){
-                echo $row['pName'] . ": " . $row['post1'] . "<br>";}
-                
+                echo $row['pName'] . ": " . $row['post1'] . "<br>";} 
             }   
         ?>
         </div>

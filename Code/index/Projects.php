@@ -19,6 +19,7 @@
     $m3_ID =        $_POST['m3_ID'];
     $intro =        $_POST['intro'];
 
+
     if(isset($_POST['submit'])){
         $sql = "INSERT INTO project(teamLID, proName, proFramwork, teamLPhone, ass_ID,
         m1_ID, m2_ID, m3_ID, intro) 
