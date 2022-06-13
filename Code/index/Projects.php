@@ -18,16 +18,18 @@
     $m2_ID =        $_POST['m2_ID'];
     $m3_ID =        $_POST['m3_ID'];
     $intro =        $_POST['intro'];
-
-
+    
+    
     if(isset($_POST['submit'])){
-        $sql = "INSERT INTO project(teamLID, proName, proFramwork, teamLPhone, ass_ID,
-        m1_ID, m2_ID, m3_ID, intro) 
-        VALUES('$teamLID', '$proName', '$proFramwork', '$teamLPhone', '$ass_ID', 
-        '$m1_ID', '$m2_ID', '$m3_ID', '$intro')";
+        $sql1 = "INSERT INTO promembers(teamLID, ass_ID, m1_ID, m2_ID, m3_ID) 
+        VALUES('$teamLID', '$ass_ID', '$m1_ID', '$m2_ID', '$m3_ID')";
+        mysqli_query($conn, $sql1);
+        
+        $sql = "INSERT INTO project(teamLID, proName, proFramwork, teamLPhone, intro) 
+        VALUES('$teamLID', '$proName', '$proFramwork', '$teamLPhone','$intro')";
         mysqli_query($conn, $sql);
     }
-
+    
 
     // Add Link
     $gitLink=   $_POST['gitLink'];
@@ -175,10 +177,12 @@
             cuse this will make a problime, First talk with your friends
             and when you are ready create it.
             <br>Aftre that you have to Upload The <strong style="font-size: 25px;">Proposel, Presentation, Discussion</strong> PDF files.
-            <br>And you can Update PDF files anytime.
-            <br>and you have to Upload your project on <strong style="font-size: 25px;">GitHub</strong> and add the link here.
-            <br>Hi: this is a guide for you to make a good Graduation book <br> you have to read <a href="About.html"><strong>About PDF</strong></a> and to build your Project on System Development life cycle <strong>(SDLC).</strong>
-            <br> there are six chapters in the Graduation Book.<br>
+            <br>And you can Update PDF files and GitHub Link anytime.
+            <br>Only team Leaders can upload and update PDF files and GitHub Link. 
+            <br>And you have to Upload your project on <strong style="font-size: 25px;">GitHub</strong> and add the link here.
+            <br>Hi: this is a guide for you to make a good Graduation book
+            <br>You have to read <a href="About.html"><strong>About PDF</strong></a> and to build your Project on System Development life cycle <strong>(SDLC).</strong>
+            <br>There are six chapters in the Graduation Book.<br>
                 <strong>Chapter One:</strong> Contain The Book Introduction<br>
                 <strong>Chapter Two:</strong> Contain The Project Planning, Analysis<br>
                 <strong>Chapter Three:</strong> Contain The Project Designs, Code<br>

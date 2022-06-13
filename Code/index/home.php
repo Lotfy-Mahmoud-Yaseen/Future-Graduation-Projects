@@ -2,7 +2,6 @@
 session_start();
 error_reporting(0);
 // include "H.php";
-
 $LL = $_SESSION['name'];
 $stuID = $_SESSION['id'];
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
@@ -159,20 +158,21 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <!-- Show Post // Getting Data -->
         <div class="show">
             <?php
-            $Q = "SELECT * FROM posts;";
-            $result = mysqli_query($conn, $Q);
+            $QQQ = "SELECT * FROM posts;";
+            $result = mysqli_query($conn, $QQQ);
             $resultCheck = mysqli_num_rows($result);
-            
             if ($resultCheck > 0){
                 while ($row = mysqli_fetch_assoc($result)){
-                echo $row['pName'] . ": " . $row['post1'] . "<br>";} 
+                echo "<strong>" . $row['pName'] . "</strong>" . ": " . $row['post1'] . "<br>";} 
             }   
-        ?>
+            ?>
         </div>
 
         <!-- Name and Logout -->
         <h2 class="BBB">Hello,
-            <?php echo $_SESSION['name']; ?>
+            <?php
+            echo $_SESSION['name']; 
+            ?>
         </h2>
 
 
