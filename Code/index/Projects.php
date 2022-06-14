@@ -28,8 +28,28 @@
         $sql = "INSERT INTO project(teamLID, proName, proFramwork, teamLPhone, intro) 
         VALUES('$teamLID', '$proName', '$proFramwork', '$teamLPhone','$intro')";
         mysqli_query($conn, $sql);
-    }
-    
+
+        $sql2 = "UPDATE student SET teamLID = $teamLID
+        WHERE stu_ID = $teamLID";
+        mysqli_query($conn, $sql2);
+
+        $sql3 = "UPDATE student SET teamLID = $teamLID
+        WHERE stu_ID = $ass_ID";
+        mysqli_query($conn, $sql3);
+
+        $sql4 = "UPDATE student SET teamLID = $teamLID
+        WHERE stu_ID = $m1_ID";
+        mysqli_query($conn, $sql4);
+
+        $sql5 = "UPDATE student SET teamLID = $teamLID
+        WHERE stu_ID = $m2_ID";
+        mysqli_query($conn, $sql5);
+        
+        $sql6 = "UPDATE student SET teamLID = $teamLID
+        WHERE stu_ID = $m3_ID";
+        mysqli_query($conn, $sql6);
+    } 
+
 
     // Add Link
     $gitLink=   $_POST['gitLink'];
