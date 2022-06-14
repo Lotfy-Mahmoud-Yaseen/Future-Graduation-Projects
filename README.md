@@ -5,4 +5,4 @@ It's a website work as subsystem with Future Graduation Projects system, it`s ma
 
 https://lotfy-mahmoud-yaseen.github.io/Future-Graduation-Projects/    <br>
 Login: to use and browse.  <br>
-https://lotfy-mahmoud-yaseen.github.io/Future-Graduation-Projects/Code/index/Home.html
+https://lotfy-mahmoud-yaseen.github.io/FGP-V0/Code/index/Home.html
