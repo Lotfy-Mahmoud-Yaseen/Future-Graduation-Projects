@@ -226,7 +226,7 @@
 </div> 
 
 <!-- Buttons -->
-<div class="Download">
+<!-- <div class="Download">
     <button class="T">
         <i class='bx bx-download'></i>
         <span class="text nav-text">Proposel</span>
@@ -246,7 +246,7 @@
         <i class='bx bx-download'></i>
         <span class="text nav-text">Graduation Book</span>
     </button>
-</div>
+</div> -->
 
 
     <!-- JavaScript Connection -->
