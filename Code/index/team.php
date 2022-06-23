@@ -14,7 +14,7 @@
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="../Style/style.css">
     <link rel="stylesheet" href="../Style/sidebar.css">
-    <link rel="stylesheet" href="../Style/team1.css">
+    <link rel="stylesheet" href="../Style/team.css">
 
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -26,93 +26,11 @@
 </head>
 
 <body>
-        <!-- The Left Bar -->
-        <nav class="sidebar close">
-            <!-- Menu Header  -->
-            <header>
-                <div class="image-text">
-                    <span class="image">
-                    <img src="../../icons/FutureLogo.png" alt="">
-                </span>
-
-                    <div class="text logo-text">
-                        <span class="name">Future</span>
-                        <span class="profession">GraduationProjects</span>
-                    </div>
-                </div>
-                <!--  -->
-                <i class='bx bx-chevron-right toggle'></i>
-                <!--  -->
-            </header>
-
-            <!-- Menu Center & Bottom -->
-            <div class="menu-bar">
-                <div class="menu">
-                    <ul class="menu-links">
-
-                        <!-- Home -->
-                        <li class="nav-link">
-                            <a href="home.php">
-                                <i class='bx bx-home-alt icon'></i>
-                                <span class="text nav-text">Home</span>
-                            </a>
-                        </li>
-
-                        <!-- Team -->
-                        <li class="nav-link">
-                            <a href="team.php">
-                                <i class='bx bx-user icon'></i>
-                                <span class="text nav-text">Team</span>
-                            </a>
-                        </li>
-
-                        <!-- Projects -->
-                        <li class="nav-link">
-                            <a href="Projects.php">
-                                <i class='bx bx-code-alt icon'></i>
-                                <span class="text nav-text">Project</span>
-                            </a>
-                        </li>
-
-                        <!-- About -->
-                        <li class="nav-link">
-                            <a href="About.html">
-                                <i class='bx bx-message-alt-detail icon'></i>
-                                <span class="text nav-text">About</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- bottom Menu -->
-                <div class="bottom-content">
-                    <li class="">
-                        <a href="logout.php">
-                            <i class='bx bx-log-out icon'></i>
-                            <span class="text nav-text">Logout</span>
-                        </a>
-                    </li>
-
-                    <li class="mode">
-                        <div class="sun-moon">
-                            <i class='bx bx-moon icon moon'></i>
-                            <i class='bx bx-sun icon sun'></i>
-                        </div>
-                        <span class="mode-text text">Dark mode</span>
-
-                        <div class="toggle-switch">
-                            <span class="switch"></span>
-                        </div>
-                    </li>
-                </div>
-            </div>
-        </nav>
-    
 
 <!-- Getting Data -->
 <div class="Data">
     <?php
-    echo "<h2>Graduation Project Team Information</h2>";
+    echo "<h2>Graduation Project Team Information</h2>" . "<hr>";
     // Leader
     $Q = "SELECT * FROM project JOIN promembers ON promembers.teamLID = project.teamLID 
     WHERE $stuID = promembers.teamLID;";
@@ -219,14 +137,14 @@
         $resultCheck5 = mysqli_num_rows($result5);
         if ($resultCheck5 > 0){
             while ($row = mysqli_fetch_assoc($result5)){
-                echo "<strong>Team Leader Name:</strong>" . " " .$row['name'] ;
+                echo "<hr>" ."<strong>Team Leader Name:</strong>" . " " .$row['name'] ;
             }
         }
     ?>
 </div> 
 
 <!-- Buttons -->
-<!-- <div class="Download">
+<div class="Download">
     <button class="T">
         <i class='bx bx-download'></i>
         <span class="text nav-text">Proposel</span>
@@ -246,7 +164,7 @@
         <i class='bx bx-download'></i>
         <span class="text nav-text">Graduation Book</span>
     </button>
-</div> -->
+</div>
 
 
     <!-- JavaScript Connection -->

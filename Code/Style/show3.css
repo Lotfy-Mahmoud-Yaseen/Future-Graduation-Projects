@@ -2,24 +2,11 @@
 
 .container123 {
     position: absolute;
-    width: 50%;
-    height: 15%;
-    top: 8%;
-    left: 20%;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
-    padding: 20px;
     border-radius: 10px;
-}
-
-.Contant {
-    position: absolute;
-    width: 89%;
-    left: 10%;
+    padding: 2%;
+    height: 13%;
     display: block;
-    top: 84%;
-    color: #707070;
-    font-size: 20px;
-    text-align: center;
 }
 
 .container123 h3 {
@@ -32,7 +19,7 @@
 
 .container123 h4 {
     position: absolute;
-    top: 65%;
+    top: 55%;
     left: 25%;
     font-size: 20px;
     color: #707070;
@@ -40,26 +27,45 @@
 
 .container123 .inputs input {
     border: none;
-    /* position: relative; */
     position: absolute;
-    width: 90%;
-    left: 6%;
-    top: 35%;
+    width: 75%;
+    left: 22%;
+    top: 20%;
+}
+
+.Center {
+    position: absolute;
+    top: 22%;
+    width: 100%;
+    /* height: 100%; */
+    margin-top: 2%;
+    display: block;
 }
 
 .show {
-    position: absolute;
-    width: 50%;
-    height: 73%;
-    top: 62%;
-    left: 45%;
+    position: relative;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
-    padding: 20px;
     border-radius: 10px;
     color: #757575;
     font-size: 20px;
+    margin-top: 1%;
+    display: block;
+}
+
+
+/* inside */
+
+.Contant {
+    position: relative;
+    width: 89%;
+    left: 10%;
+    display: block;
+    top: 84%;
+    color: #707070;
+    font-size: 20px;
+    text-align: center;
 }
 
 
@@ -107,24 +113,31 @@
         height: 11%;
     }
     .container123 h3 {
-        font-size: 10px;
+        font-size: 15px;
         position: absolute;
         left: 1%;
         top: 5%;
     }
     .container123 h4 {
         font-size: 10px;
-        left: 10%;
+        left: 20%;
         top: 70%;
     }
+    .container123 .inputs input {
+        top: 39%;
+        left: 15%;
+        width: 80%;
+    }
+    .Center {
+        margin-top: 0%;
+    }
     .show {
-        /* z-index: 100; */
-        position: absolute;
         top: 46%;
         left: 57.5%;
         width: 80%;
-        height: 50%;
         font-size: 15px;
+        margin-top: 20%;
+        padding: 5%;
     }
     .BBB {
         text-align: center;
@@ -133,6 +146,7 @@
         font-size: 25px;
         left: 25%;
         top: 70%;
+        display: none;
     }
     .AContant {
         position: absolute;
@@ -143,5 +157,6 @@
         font-size: 25px;
         left: 15%;
         top: 75%;
+        display: none;
     }
 }
