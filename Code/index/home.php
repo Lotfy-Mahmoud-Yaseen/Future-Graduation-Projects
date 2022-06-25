@@ -18,7 +18,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <link rel="stylesheet" href="../Style/style.css">
     <link rel="stylesheet" href="../Style/sidebar.css">
     <link rel="stylesheet" href="../Style/Posts.css">
-    <link rel="stylesheet" href="../Style/show3.css">
+    <link rel="stylesheet" href="../Style/show6.css">
 
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -31,47 +31,46 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
 <body>
     <!-- Creating Post -->
+    <div class="container123">
+        <h3 class="BB">
+            <?php echo $LL . " "?>:
+        </h3>
+        <center>
+            <div class="inputs">
+                <input type="text" onclick="togglepopup()">
+            </div>
 
-        <div class="container123">
-            <h3 class="BB">
-                <?php echo $LL . " "?>:
-            </h3>
-            <center>
-                <div class="inputs">
-                    <input type="text" onclick="togglepopup()">
-                </div>
-
-                <?php
-                    $conn = mysqli_connect('localhost', 'root', '', 'fgp');
+            <?php
+                $conn = mysqli_connect('localhost', 'root', '', 'fgp');
                     
-                    // Create Post
-                    $post1=   $_POST['post1'];
-                    $pName=   $_SESSION['name'];
+                // Create Post
+                $post1=   $_POST['post1'];
+                $pName=   $_SESSION['name'];
 
-                    if(isset($_POST['Psubmit'])){
-                        $P = "INSERT INTO posts(post1, pName) VALUES('$post1','$pName')";
-                        
-                        mysqli_query($conn, $P);
-                    }
-                ?>
-                    <div class="popup" id="popup-1">
-                        <div class="overlay"></div>
-                        <div class="content">
-                            <div class="close-btn" onclick="togglePopup()">&times;</div>
+                if(isset($_POST['Psubmit'])){
+                    $P = "INSERT INTO posts(post1, pName) VALUES('$post1','$pName')";
+                    
+                    mysqli_query($conn, $P);
+                }
+            ?>
+                <div class="popup" id="popup-1">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <div class="close-btn" onclick="togglePopup()">&times;</div>
 
-                            <form action="home.php" method="POST">
-                                <div>
-                                    <label>Create Post</label>
-                                    <br>
-                                    <textarea type="text" name="post1" id="post1" required></textarea>
-                                    <input type="submit" value="Add" name="Psubmit">
-                                </div>
-                            </form>
-                        </div>
+                        <form action="home.php" method="POST">
+                            <div>
+                                <label>Create Post</label>
+                                <br>
+                                <textarea type="text" name="post1" id="post1" required></textarea>
+                                <input type="submit" value="Add" name="Psubmit">
+                            </div>
+                        </form>
                     </div>
-            </center>
-            <h4>click to share a post with your friends</h4>
-        </div>
+                </div>
+        </center>
+        <h4>click to share a post with your friends</h4>
+    </div>
 
     <div class="Center">
         <!-- Show Post // Getting Data -->
@@ -86,6 +85,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         ?>
     </div>
 
+    <div class="im">
+        <img src="../../icons/160_11024748.png" alt="Backgraund">
+    </div>
+    
     <!-- Name and Logout -->
     <h2 class="BBB">Hello,
         <?php

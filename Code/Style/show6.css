@@ -3,10 +3,13 @@
 .container123 {
     position: absolute;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
-    border-radius: 10px;
-    padding: 2%;
+    border-radius: 25px;
+    padding: 3%;
     height: 13%;
     display: block;
+    left: 20%;
+    top: 8%;
+    width: 50%;
 }
 
 .container123 h3 {
@@ -19,7 +22,7 @@
 
 .container123 h4 {
     position: absolute;
-    top: 55%;
+    top: 65%;
     left: 25%;
     font-size: 20px;
     color: #707070;
@@ -28,16 +31,17 @@
 .container123 .inputs input {
     border: none;
     position: absolute;
-    width: 75%;
-    left: 22%;
-    top: 20%;
+    border-radius: 10px;
+    width: 85%;
+    left: 10%;
+    top: 38%;
 }
 
 .Center {
     position: absolute;
-    top: 22%;
-    width: 100%;
-    /* height: 100%; */
+    top: 23%;
+    left: 45%;
+    width: 50%;
     margin-top: 2%;
     display: block;
 }
@@ -52,6 +56,7 @@
     font-size: 20px;
     margin-top: 1%;
     display: block;
+    padding: 2%;
 }
 
 
@@ -71,18 +76,27 @@
 
 /* Some */
 
+.im {
+    position: fixed;
+    padding: 0%;
+    margin: 0%;
+    font-size: 25px;
+    left: 76%;
+    top: 2%;
+}
+
 .BBB {
-    position: absolute;
+    position: fixed;
     padding: 0%;
     margin: 0%;
     font-size: 25px;
     left: 80%;
-    top: 8%;
+    top: 30%;
     color: #757575;
 }
 
 .AContant {
-    position: absolute;
+    position: fixed;
     padding: 0%;
     margin: 0%;
     text-align: center;
@@ -90,12 +104,9 @@
     height: 50px;
     font-size: 25px;
     left: 71%;
-    top: 12%;
+    top: 34%;
     color: #757575;
 }
-
-
-/* Phone */
 
 @media screen and (max-width:600px) {
     .Contant123 {
