@@ -233,3 +233,10 @@
     border-radius: 50%;
     cursor: pointer;
 }
+
+
+/* About incloud */
+
+.im {
+    display: none;
+}

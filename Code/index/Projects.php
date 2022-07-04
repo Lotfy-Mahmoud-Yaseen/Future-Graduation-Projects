@@ -19,39 +19,93 @@
     $m3_ID =        $_POST['m3_ID'];
     $intro =        $_POST['intro'];
     
-    
+    // Creating Team
     if(isset($_POST['submit'])){
-        $sql1 = "INSERT INTO promembers(teamLID, ass_ID, m1_ID, m2_ID, m3_ID) 
-        VALUES('$teamLID', '$ass_ID', '$m1_ID', '$m2_ID', '$m3_ID')";
-        mysqli_query($conn, $sql1);
+        // Fetch and Comparison ID`s as a Student.
+        $sql321 = "SELECT stu_ID FROM student";
+        $result321 = mysqli_query($conn, $sql321);
+        if (mysqli_num_rows($result321) > 0) {
+            while($row = mysqli_fetch_assoc($result321)) {
+                if($row["stu_ID"] == $teamLID){
+                    $one = true;
+                }
+                if($row["stu_ID"] == $ass_ID){
+                    $two = true;
+                }
+                if($row["stu_ID"] == $m1_ID){
+                    $three = true;
+                }
+                if($row["stu_ID"] == $m2_ID){
+                    $fure = true;
+                }
+                if($row["stu_ID"] == $m3_ID){
+                    $five = true;
+                }
+            }
+        }
+
+        // How make team 
+        if($stuID == $teamLID){
+            $LID = true;
+        }
         
-        $sql = "INSERT INTO project(teamLID, proName, proFramwork, teamLPhone, intro) 
-        VALUES('$teamLID', '$proName', '$proFramwork', '$teamLPhone','$intro')";
-        mysqli_query($conn, $sql);
+        // Excution
+        if($one == true AND $two == true AND $three == true
+        AND $fure == true AND $five == true AND $LID == true){
+            $sql = "INSERT INTO project(teamLID, proName, proFramwork, teamLPhone, intro) 
+            VALUES('$teamLID', '$proName', '$proFramwork', '$teamLPhone','$intro')";
+            mysqli_query($conn, $sql);
 
-        $sql2 = "UPDATE student SET teamLID = $teamLID
-        WHERE stu_ID = $teamLID";
-        mysqli_query($conn, $sql2);
-
-        $sql3 = "UPDATE student SET teamLID = $teamLID
-        WHERE stu_ID = $ass_ID";
-        mysqli_query($conn, $sql3);
-
-        $sql4 = "UPDATE student SET teamLID = $teamLID
-        WHERE stu_ID = $m1_ID";
-        mysqli_query($conn, $sql4);
-
-        $sql5 = "UPDATE student SET teamLID = $teamLID
-        WHERE stu_ID = $m2_ID";
-        mysqli_query($conn, $sql5);
-        
-        $sql6 = "UPDATE student SET teamLID = $teamLID
-        WHERE stu_ID = $m3_ID";
-        mysqli_query($conn, $sql6);
+            $sql2 = "UPDATE student SET teamLID = $teamLID
+            WHERE stu_ID = $teamLID";
+            mysqli_query($conn, $sql2);
+    
+            $sql3 = "UPDATE student SET teamLID = $teamLID
+            WHERE stu_ID = $ass_ID";
+            mysqli_query($conn, $sql3);
+    
+            $sql4 = "UPDATE student SET teamLID = $teamLID
+            WHERE stu_ID = $m1_ID";
+            mysqli_query($conn, $sql4);
+    
+            $sql5 = "UPDATE student SET teamLID = $teamLID
+            WHERE stu_ID = $m2_ID";
+            mysqli_query($conn, $sql5);
+            
+            $sql6 = "UPDATE student SET teamLID = $teamLID
+            WHERE stu_ID = $m3_ID";
+            mysqli_query($conn, $sql6);
+            // Socsessfull Popup
+            echo "<div class='Completion'>
+                <img src='../../icons/checked.png' alt=''> 
+                <h1>Successfull :)</h1>
+                <p>Successfully Team Creation</p>
+                <a href='Projects.php'><button type'submet' id=''> Cancel</button></a>
+            </div>";
+        }else{
+            // filed Popup
+            echo "<div class='Completion'>
+                <img src='../../icons/cancel.png' alt=''> 
+                <h1>Sorry :(</h1>
+                <p>Data are Wrong !</p>
+                <a href='Projects.php'><button type'submet' id=''> Cancel</button></a>
+            </div>";
+        }
     } 
 
+    // Some About
+    // $sql3210 = "SELECT stu_ID, teamLID FROM student WHERE stu_ID = $stuID";
+    // $result3210 = mysqli_query($conn, $sql3210);
+    // if ($row["teamLID"] != 'NULL') {        
+    //     include "nn.php";
+    //     // while($row = mysqli_fetch_assoc($result3210)) {
+    //     //     if($row["teamLID"] != 'NULL'){
+    //     //         include "nn.php";
+    //     //     }
+    //     // }
+    // }
 
-    // Add Link
+    // Add And Update GitHub Link
     $gitLink=   $_POST['gitLink'];
     if(isset($_POST['submit1'])){
         $gL = "UPDATE project SET gitLink='$gitLink' WHERE teamLID= $stuID";
@@ -87,80 +141,64 @@
 <!DOCTYPE html>
 <html lang="en">
     
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="../Style/proTeam2.css">
+    <link rel="stylesheet" href="../Style/proGit5.css">
+    <link rel="stylesheet" href="../Style/proUpload.css">
+</head>
 
-        <!----======== CSS ======== -->
-        <link rel="stylesheet" href="../Style/style.css">
-        <link rel="stylesheet" href="../Style/sidebar.css">
-        <link rel="stylesheet" href="../Style/proTeam.css">
-        <link rel="stylesheet" href="../Style/proGit.css">
-        <link rel="stylesheet" href="../Style/proUpload.css">
-        
-        <!----===== Boxicons CSS ===== -->
-        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-        <!-- FontAweome CDN Link for Icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<body>
+    <!-- About Page -->
+    <label class="add">
+        <strong style="font-size: 30px;">Hi:</strong> dont create a team if you dont sure about any information
+        cuse this will make a problime, First talk with your friends
+        and when you are ready create it.
+        <br>Aftre that you have to Upload The <strong style="font-size: 25px;">Proposel, Presentation, Discussion</strong> PDF files.
+        <br>And you can Update PDF files and GitHub Link anytime.
+        <br>Only team Leaders can upload and update PDF files and GitHub Link. 
+        <br>And you have to Upload your project on <strong style="font-size: 25px;">GitHub</strong> and add the link here.
+        <br>Hi: this is a guide for you to make a good Graduation book
+        <br>You have to read <a href="About.html"><strong>About PDF</strong></a> and to build your Project on System Development life cycle <strong>(SDLC).</strong>
+        <br>There are six chapters in the Graduation Book.<br>
+            <strong>Chapter One:</strong> Contain The Book Introduction<br>
+            <strong>Chapter Two:</strong> Contain The Project Planning, Analysis<br>
+            <strong>Chapter Three:</strong> Contain The Project Designs, Code<br>
+            <strong>Chapter Four:</strong> Contain Integration, Testing<br>
+            <strong>Chapter Five:</strong> Contain Acceptance, installation, deployment<br>
+            <strong>Chapter Six:</strong> Contain The Recommendations, Conclusion, Sources<br>
+        When you Write the Chapter the Doctor will read it and give you feedback to do it right.
+    </label>
 
-        <!----======== Page Title ======== -->
-        <title>Future Graduation Projects</title>
-    </head>
+    <!-- Buttons -->
+    <div class="Upload">
+        <button class="Cr" onclick="CrTeam()">Create Team</button>
 
-    <body>
+        <button class="T" onclick="togglePOP()">
+            <i class='bx bx-upload'></i>
+            <span class="text nav-text">Proposel</span>
+        </button>
 
+        <button class="T" onclick="togglePOP1()">
+            <i class='bx bx-upload'></i>
+            <span class="text nav-text">Presentation</span>
+        </button>
 
-        <!-- About Page -->
-        <label class="add">
-            <strong style="font-size: 30px;">Hi:</strong> dont create a team if you dont sure about any information
-            cuse this will make a problime, First talk with your friends
-            and when you are ready create it.
-            <br>Aftre that you have to Upload The <strong style="font-size: 25px;">Proposel, Presentation, Discussion</strong> PDF files.
-            <br>And you can Update PDF files and GitHub Link anytime.
-            <br>Only team Leaders can upload and update PDF files and GitHub Link. 
-            <br>And you have to Upload your project on <strong style="font-size: 25px;">GitHub</strong> and add the link here.
-            <br>Hi: this is a guide for you to make a good Graduation book
-            <br>You have to read <a href="About.html"><strong>About PDF</strong></a> and to build your Project on System Development life cycle <strong>(SDLC).</strong>
-            <br>There are six chapters in the Graduation Book.<br>
-                <strong>Chapter One:</strong> Contain The Book Introduction<br>
-                <strong>Chapter Two:</strong> Contain The Project Planning, Analysis<br>
-                <strong>Chapter Three:</strong> Contain The Project Designs, Code<br>
-                <strong>Chapter Four:</strong> Contain Integration, Testing<br>
-                <strong>Chapter Five:</strong> Contain Acceptance, installation, deployment<br>
-                <strong>Chapter Six:</strong> Contain The Recommendations, Conclusion, Sources<br>
-            When you Write the Chapter the Doctor will read it and give you feedback to do it right.
-        </label>
+        <button class="T" onclick="togglePOP2()">
+            <i class='bx bx-upload'></i>
+            <span class="text nav-text">Discussion</span>
+        </button>
 
-        <!-- Buttons -->
-        <div class="Upload">
-            <button class="T" onclick="CrTeam()">Create Team</button>
+        <button class="T" onclick="git()">
+            <i class='bx bxl-github'></i>
+            <span class="text nav-text">Project GitHub</span>
+        </button>
 
-            <button class="T" onclick="togglePOP()">
-                <i class='bx bx-upload'></i>
-                <span class="text nav-text">Proposel</span>
-            </button>
-
-            <button class="T" onclick="togglePOP1()">
-                <i class='bx bx-upload'></i>
-                <span class="text nav-text">Presentation</span>
-            </button>
-
-            <button class="T" onclick="togglePOP2()">
-                <i class='bx bx-upload'></i>
-                <span class="text nav-text">Discussion</span>
-            </button>
-
-            <button class="T" onclick="git()">
-                <i class='bx bxl-github'></i>
-                <span class="text nav-text">Project GitHub</span>
-            </button>
-
-            <button class="T" onclick="togglePOP3()">
-                <i class='bx bx-book icon'></i>
-                <span class="text nav-text">Upload Book</span>
-            </button>
-        </div>
+        <button class="T" onclick="togglePOP3()">
+            <i class='bx bx-book icon'></i>
+            <span class="text nav-text">Upload Book</span>
+        </button>
+    </div>
 
         <!-- Creating Team -->
         <div class="popup" id="CrTeam-1">
@@ -219,7 +257,7 @@
                         </div>
 
                         <div class="inputfield">
-                            <input type="submit" name="submit" Value="Create" class="btn">
+                            <input type="submit" name="submit" id="submit" Value="Create" class="btn" >
                         </div>
                     </div>
                 </form>
@@ -234,7 +272,6 @@
                 <form action="Projects.php" method="POST">
                     <h1>Project GitHub Link</h1>
                     <div class="inputfield">
-                        <!-- <label></label> -->
                         <input type="url" name="gitLink" class="input" required>
                     </div>
 
@@ -245,7 +282,7 @@
             </div>
         </div>
 
-        <!-- Upload First -->
+        <!-- Upload Pro -->
         <div class="POP" id="POP-1">
             <div class="over"></div>
             <div class="con">
@@ -259,7 +296,7 @@
             </div>
         </div>
 
-       <!-- Upload Secound -->
+        <!-- Upload Pre -->
         <div class="POP1" id="POP1-1">
             <div class="over1"></div>
             <div class="con1">
@@ -273,7 +310,7 @@
             </div>
         </div>
 
-        <!-- Upload Third -->
+        <!-- Upload Dis -->
         <div class="POP2" id="POP2-1">
             <div class="over2"></div>
             <div class="con2">
@@ -302,13 +339,7 @@
             </div>
         </div>        
 
-
-        <!-- JavaScript Connection -->
-        <script src="../Script/script.js" async defer></script>
-        <script src="../Script/project.js"></script>
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    </body>
-
+    <!-- JavaScript Connection -->
+    <script src="../Script/project.js"></script>
+</body>
 </html>

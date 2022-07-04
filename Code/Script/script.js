@@ -1,4 +1,4 @@
-// Hide and show
+// Login :Hide and show
 function onSignIn(googleUser) {
     var profile = googleUser.getBasicProfile();
     $("#name").text(profile.getName());
@@ -14,8 +14,6 @@ function onSignIn(googleUser) {
     $(".fuimg").css("display", "none");
     $(".container").css("display", "none");
     $(".fuimg1").css("display", "none");
-
-
 }
 
 function signOut() {

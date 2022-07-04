@@ -10,10 +10,10 @@ include"sidebar.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!----======== CSS ======== -->
-    <link rel="stylesheet" href="../Style/style.css">
-    <link rel="stylesheet" href="../Style/upperbar.css">
-    <link rel="stylesheet" href="../Style/sidebar.css">
-    <link rel="stylesheet" href="../Style/post.css">
+    <!-- <link rel="stylesheet" href="../Style/style.css"> -->
+    <!-- <link rel="stylesheet" href="../Style/upperbar.css"> -->
+    <!-- <link rel="stylesheet" href="../Style/sidebar.css"> -->
+    <!-- <link rel="stylesheet" href="../Style/post.css"> -->
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="../Style/Abou.css">
     <!-- <link rel="stylesheet" href="..\Style\about.css"> -->
@@ -21,14 +21,13 @@ include"sidebar.php";
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <!-- FontAweome CDN Link for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> -->
 
     <!----======== Page Title ======== -->
-    <title>Future Graduation Projects</title>
+    <!-- <title>Future Graduation Projects</title> -->
 </head>
 
 <body>
-
     <!-- Download Button -->
     <P>
         SDLC is some of the steps a stander you have to go through to make good software.

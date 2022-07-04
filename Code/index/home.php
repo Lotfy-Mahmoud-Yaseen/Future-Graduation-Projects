@@ -18,7 +18,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <link rel="stylesheet" href="../Style/style.css">
     <link rel="stylesheet" href="../Style/sidebar.css">
     <link rel="stylesheet" href="../Style/Posts.css">
-    <link rel="stylesheet" href="../Style/show6.css">
+    <link rel="stylesheet" href="../Style/show9.css">
 
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -33,7 +33,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <!-- Creating Post -->
     <div class="container123">
         <h3 class="BB">
-            <?php echo $LL . " "?>:
+            <?php echo "<strong>".$LL."</strong>". " :"?>
         </h3>
         <center>
             <div class="inputs">
@@ -80,7 +80,17 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             $resultCheck = mysqli_num_rows($result);
             if ($resultCheck > 0){
                 while ($row = mysqli_fetch_assoc($result)){
-                echo "<div class='show'>"."<strong>" . $row['pName'] . "</strong>" . ": " . $row['post1']. "</div>";} 
+                echo "<div class='show'>"."<strong>" . $row['pName']. " :". "</strong>".
+                "<br>".$row['post1']."<br>"."<hr>"
+                ."<i class='bx bx-like' ></i>"
+                ." 10 "
+                ."<i class='bx bx-dislike' ></i>"
+                ." 5 "
+                // ."<i class='bx bxs-dislike' ></i>"
+                // ."<i class='bx bxs-like' ></i>"
+                ."<i class='bx bx-comment'></i>"
+                ." 2 "
+                ."</div>";} 
             }   
         ?>
     </div>
